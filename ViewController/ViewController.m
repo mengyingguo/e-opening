@@ -86,7 +86,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
-    NSString * token = @"eyJhbGciOiJIUzUxMiJ9.eyJhdXRoX3R5cGUiOiJhZ3QiLCJhZ2VudF9uYW1lIjoi5YiY5pmT6bilIiwidXNlcl9rZXkiOiJmYWI4ZjhjNC1iNzQwLTQ4ZTgtYWQ1OS0wMjg1YzI3N2IzM2QiLCJhZ2VudF9jb2RlIjoiODYwMTAwMDM3NSJ9.X-gaAcSX9338gZJjDr79LdXbHzhaEE1fTTQl6VzpyGV4hdUZnqVttoq57s9emSwuNdCSN-EWx45D5ZyrlDOizA";
+    NSString * token = @"eyJhbGciOiJIUzUxMiJ9.eyJhdXRoX3R5cGUiOiJhZ3QiLCJhZ2VudF9uYW1lIjoi5YiY5pmT6bilIiwidXNlcl9rZXkiOiJmYzJhYTZlNy0yMTRlLTQzZjctYjM4Ny1lYmMyMTRiMWEwOGEiLCJhZ2VudF9jb2RlIjoiODYwMTAwMDM3NSJ9.IsbVhwHbYb_LCr1EJKdLvnTWydltrlkCiFyqO3-AKOJvILLuHVJQLrzsP7xiWmK22t9clwD4AxQHXLpWNPP5XQ";
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:token forKey:@"token"];
     [userDefaults synchronize];
@@ -266,7 +266,7 @@
                 UIAlertAction *cancel = [UIAlertAction actionWithTitle: @"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
                 }];
                 [imapAlertVC addAction:go];
-//                [imapAlertVC addAction:cancel];
+                [imapAlertVC addAction:cancel];
                 [self presentViewController:imapAlertVC animated:true completion:nil];
                 
             }

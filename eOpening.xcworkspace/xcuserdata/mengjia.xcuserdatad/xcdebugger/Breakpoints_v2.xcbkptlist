@@ -556,14 +556,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "17B724E9-A560-4583-8735-F9521D249B03 - 6ef63ab0e5322f86"
+                  uuid = "17B724E9-A560-4583-8735-F9521D249B03 - f2cfe598a57c93ba"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__41-[ViewController isUpdateAndGotoDownload]_block_invoke_2"
                   moduleName = "eOpening"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mengjia/Desktop/e-opening(PROD)%E8%BF%9C%E7%A8%8B/ViewController/ViewController.m"
+                  urlString = "file:///Users/mengjia/Desktop/e-opening/ViewController/ViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "368"
@@ -571,14 +571,14 @@
                   offsetFromSymbolStart = "1729">
                </Location>
                <Location
-                  uuid = "17B724E9-A560-4583-8735-F9521D249B03 - 6ef63ab0e5322f86"
+                  uuid = "17B724E9-A560-4583-8735-F9521D249B03 - f2cfe598a57c93ba"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__41-[ViewController isUpdateAndGotoDownload]_block_invoke_2"
                   moduleName = "eOpening"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mengjia/Desktop/e-opening(PROD)%E8%BF%9C%E7%A8%8B/ViewController/ViewController.m"
+                  urlString = "file:///Users/mengjia/Desktop/e-opening/ViewController/ViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "368"
