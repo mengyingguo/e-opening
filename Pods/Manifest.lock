@@ -1,0 +1,63 @@
+PODS:
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
+    - AFNetworking/NSURLSession
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - LKDBHelper (2.5.1):
+    - LKDBHelper/standard (= 2.5.1)
+  - LKDBHelper/standard (2.5.1):
+    - FMDB
+  - Masonry (1.0.2)
+  - MJExtension (3.2.4)
+  - SSZipArchive (2.1.1)
+  - SVProgressHUD (2.2.5)
+  - WebViewJavascriptBridge (6.0.3)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.2)
+  - LKDBHelper (~> 2.5.1)
+  - Masonry (~> 1.0.2)
+  - MJExtension
+  - SSZipArchive
+  - SVProgressHUD
+  - WebViewJavascriptBridge (~> 6.0.3)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - FMDB
+    - LKDBHelper
+    - Masonry
+    - SSZipArchive
+    - SVProgressHUD
+    - WebViewJavascriptBridge
+  trunk:
+    - MJExtension
+
+SPEC CHECKSUMS:
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  LKDBHelper: 9a276ba51f2e16263d46a9517e16cc9b03472664
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
+  SSZipArchive: 14401ade5f8e82aba1ff03e9f88e9de60937ae60
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+
+PODFILE CHECKSUM: 589213eab6dbb8922b15a8d4e78b30d622541812
+
+COCOAPODS: 1.11.2
