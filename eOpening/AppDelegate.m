@@ -57,8 +57,7 @@
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    //[self.viewController cancelAllAlert];
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    [self.viewController cancelAllAlert];
     [self deleyToRefreshHome];
 }
 
@@ -85,7 +84,9 @@
     [userDefaults setObject:token forKey:@"token"];
     [userDefaults synchronize];
 //    kPOP(uudic[@"token"]);
-    [[NSNotificationCenter defaultCenter] postNotificationName:kDidBecomeActiveNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:kDidBecomeActiveNotification object:nil];
+    [self.viewController cancelAllAlert];
+    [self deleyToRefreshHome];
 
     return YES;
 

@@ -516,7 +516,7 @@
 //    //本地的版本
 //    return [downLoadHistoryDictionary objectForKey:@"curVersion"];
 //
-    return get_sp(@"curH5Version");
+    return get_sp(@"localCachingH5Version");
 }
 
 + (NSMutableDictionary *)deleteNull:(NSDictionary *)dic{

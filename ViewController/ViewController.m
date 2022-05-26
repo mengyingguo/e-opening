@@ -86,10 +86,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
-    NSString * token = @"eyJhbGciOiJIUzUxMiJ9.eyJhdXRoX3R5cGUiOiJhZ3QiLCJhZ2VudF9uYW1lIjoi5YiY5pmT6bilIiwidXNlcl9rZXkiOiJmYzJhYTZlNy0yMTRlLTQzZjctYjM4Ny1lYmMyMTRiMWEwOGEiLCJhZ2VudF9jb2RlIjoiODYwMTAwMDM3NSJ9.IsbVhwHbYb_LCr1EJKdLvnTWydltrlkCiFyqO3-AKOJvILLuHVJQLrzsP7xiWmK22t9clwD4AxQHXLpWNPP5XQ";
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:token forKey:@"token"];
-    [userDefaults synchronize];
+//    NSString * token = @"eyJhbGciOiJIUzUxMiJ9.eyJhdXRoX3R5cGUiOiJhZ3QiLCJhZ2VudF9uYW1lIjoi5YiY5pmT6bilIiwidXNlcl9rZXkiOiJmYzJhYTZlNy0yMTRlLTQzZjctYjM4Ny1lYmMyMTRiMWEwOGEiLCJhZ2VudF9jb2RlIjoiODYwMTAwMDM3NSJ9.IsbVhwHbYb_LCr1EJKdLvnTWydltrlkCiFyqO3-AKOJvILLuHVJQLrzsP7xiWmK22t9clwD4AxQHXLpWNPP5XQ";
+//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//    [userDefaults setObject:token forKey:@"token"];
+//    [userDefaults synchronize];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startDownload) name:kNetworkChangedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshAndDownload) name:kDidBecomeActiveNotification object:nil];
@@ -376,7 +376,7 @@
                     //提示是否前往更新
                     if(zipArray.count > 0 && ![h5version isEqualToString:h5CurVersion] && !h5curVersionFlag){
                         if (@available(iOS 8.0, *)) {
-                            updateAlertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"检测到更新，是否前往更新？" preferredStyle:UIAlertControllerStyleAlert];
+                            updateAlertVC = [UIAlertController alertControllerWithTitle:@"提示" message:h5upatedesc preferredStyle:UIAlertControllerStyleAlert];
                             UIAlertAction *go = [UIAlertAction actionWithTitle: @"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction* action) {
                                 [self downLoadH5Zip];
                             }];
@@ -596,6 +596,10 @@
             NSString *currenVersion = [[BDTools getCurH5Version] floatValue]>0?[BDTools getCurH5Version]:@"0.00";
             [[BDNetServerDownLoadTool sharedTool] fixIndexFileNameWithVersion:currenVersion toVersion:curVersion];
             if ([[BDNetServerDownLoadTool sharedTool] unzipFile:filePath withDstPath:unZipFileLocal password:password]) {
+                NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+                [userDefaults setObject:curVersion forKey:@"localCachingH5Version"];
+                [userDefaults synchronize];
+
                 //保存下载的plist
                 [[BDNetServerDownLoadTool sharedTool] downLoadHistoryDictionaryToSave:dicVersion curVersion:curVersion];
                 [[BDNetServerDownLoadTool sharedTool] setBreakpointHistoryDictionaryToNil];
