@@ -37,7 +37,7 @@ static BDHttpService *_instance = nil;
     
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager manager]initWithBaseURL:[NSURL URLWithString:url]];
     AFHTTPRequestSerializer *requestSerializer =  [AFJSONRequestSerializer serializer];
-    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"access_token"];
     if (token != nil) {
         NSString * authorization = [NSString stringWithFormat:@"Bearer %@",token];
         NSDictionary *headerFieldValueDictionary = @{@"Authorization":authorization};
@@ -77,7 +77,7 @@ static BDHttpService *_instance = nil;
         //    securityPolicy.pinnedCertificates = [[NSSet alloc] initWithObjects:cerData,nil];
         //    manager.securityPolicy= securityPolicy;
         AFHTTPRequestSerializer *requestSerializer =  [AFJSONRequestSerializer serializer];
-        NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
+        NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"access_token"];
         if (token != nil) {
             NSString * authorization = [NSString stringWithFormat:@"Bearer %@",token];
             NSDictionary *headerFieldValueDictionary = @{@"Authorization":authorization};

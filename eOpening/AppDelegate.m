@@ -58,7 +58,11 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     [self.viewController cancelAllAlert];
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
     [self deleyToRefreshHome];
+    });
 }
 
 
@@ -81,10 +85,9 @@
     NSLog(@"token == %@",uudic[@"token"]);
     NSString * token = uudic[@"token"];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:token forKey:@"token"];
+    [userDefaults setObject:token forKey:@"access_token"];
     [userDefaults synchronize];
 //    kPOP(uudic[@"token"]);
-//    [[NSNotificationCenter defaultCenter] postNotificationName:kDidBecomeActiveNotification object:nil];
     [self.viewController cancelAllAlert];
     [self deleyToRefreshHome];
 

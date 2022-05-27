@@ -88,7 +88,7 @@
     [self initUI];
 //    NSString * token = @"eyJhbGciOiJIUzUxMiJ9.eyJhdXRoX3R5cGUiOiJhZ3QiLCJhZ2VudF9uYW1lIjoi5YiY5pmT6bilIiwidXNlcl9rZXkiOiJmYzJhYTZlNy0yMTRlLTQzZjctYjM4Ny1lYmMyMTRiMWEwOGEiLCJhZ2VudF9jb2RlIjoiODYwMTAwMDM3NSJ9.IsbVhwHbYb_LCr1EJKdLvnTWydltrlkCiFyqO3-AKOJvILLuHVJQLrzsP7xiWmK22t9clwD4AxQHXLpWNPP5XQ";
 //    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//    [userDefaults setObject:token forKey:@"token"];
+//    [userDefaults setObject:token forKey:@"access_token"];
 //    [userDefaults synchronize];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startDownload) name:kNetworkChangedNotification object:nil];
